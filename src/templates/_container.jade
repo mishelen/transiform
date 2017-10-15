@@ -1,0 +1,15 @@
+extends _document_skeleton
+
+block content
+	.app-wrapper
+		header(role="banner").global
+			block header
+				include includes/_header
+		-if (debug)
+			include _debug-layout
+
+		block article
+
+		footer.global
+			block footer
+				include includes/_footer

@@ -1,0 +1,16 @@
+block footer
+    hr
+    .container-fluid
+        .row
+            .col-4.footer__logo
+                include _logo-inline
+                | #{company}
+                p.small.right © 2017 — All Rights Reserved
+            .copy.col-8
+                ul.list-unstyled
+                    li
+                        span.icn.icn-skype
+                        a(href="skype:#{company.toLowerCase()}?add") #{company.toLowerCase()}
+                    li
+                        span.icn.icn-letter_mail
+                        a(href="mailto:#{mail}")  #{mail}

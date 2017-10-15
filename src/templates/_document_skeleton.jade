@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+    -var mail = "info@transinform.by"
+    -var company = "Transinform"
+    -var adress = "www.transinform.by"
+    -var debug = false
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        block title
+        meta( name="description" content="")
+        meta( name="keywords" content="#{company} ")
+        link(rel='stylesheet' href='./styles/index.min.css')
+        //include includes/_favicons
+
+    body
+        block content
+
+        block after-all
+            script(src='./main.min.js')
+            script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+
+
+
+

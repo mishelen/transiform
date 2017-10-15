@@ -1,0 +1,135 @@
+/*! Bootstrap v4.0.0-beta (https://getbootstrap.com) */
+@import "pre-settings";
+@import "../../node_modules/bootstrap/scss/functions";
+// Bootstrap original variables
+@import "../../node_modules/bootstrap/scss/variables";
+// copy of Bootstrap original variables deleted !default and commented^
+@import "variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+//@import "../../node_modules/bootstrap/scss/print";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+//@import "../../node_modules/bootstrap/scss/images";
+//@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+//@import "../../node_modules/bootstrap/scss/tables";
+//@import "../../node_modules/bootstrap/scss/forms";
+//@import "../../node_modules/bootstrap/scss/buttons";
+//@import "../../node_modules/bootstrap/scss/transitions";
+//@import "../../node_modules/bootstrap/scss/dropdown";
+//@import "../../node_modules/bootstrap/scss/button-group";
+//@import "../../node_modules/bootstrap/scss/input-group";
+//@import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+//@import "../../node_modules/bootstrap/scss/card";
+//@import "../../node_modules/bootstrap/scss/breadcrumb";
+//@import "../../node_modules/bootstrap/scss/pagination";
+//@import "../../node_modules/bootstrap/scss/badge";
+//@import "../../node_modules/bootstrap/scss/jumbotron";
+//@import "../../node_modules/bootstrap/scss/alert";
+//@import "../../node_modules/bootstrap/scss/progress";
+//@import "../../node_modules/bootstrap/scss/media";
+//@import "../../node_modules/bootstrap/scss/list-group";
+//@import "../../node_modules/bootstrap/scss/close";
+//@import "../../node_modules/bootstrap/scss/modal";
+//@import "../../node_modules/bootstrap/scss/tooltip";
+//@import "../../node_modules/bootstrap/scss/popover";
+//@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+.navbar-brand {
+    .logo {
+        display: inline-block;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.footer__logo {
+    .logo {
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.section {
+    
+}
+
+.container-wrapper {
+    &:nth-child(odd) {
+        background: #f8f9fa;
+    }
+    
+    &:nth-child(even) {
+        background: #dae0e5;
+    }
+}
+
+.container-fluid {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    @include media-breakpoint-up(sm) {
+        max-width: 75em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .global & {
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}
+
+#intro {
+    background: #e7eeef;
+} 
+#directions {}
+#technologies {} 
+#perspectives {}
+#contacts {
+    height: 100vh;
+    min-height: 600px;
+}
+
+
+.heading {
+    font-size: 1.6rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 2rem;
+    }
+
+    #intro & {
+        font-size: 2.5rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+.sub-heading {
+    font-size: 1.4rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.65rem;
+    }
+    
+    
+}
+
+.lead {
+    font-size: 1.25rem;
+    @include media-breakpoint-up(lg) {
+        font-size: 1.34rem;
+    }
+    
+    #intro & {
+        font-size: 1.55rem;
+        @include media-breakpoint-up(lg) {
+            font-size: 1.65rem;
+        }
+    }
+}
+
