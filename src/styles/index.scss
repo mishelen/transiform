@@ -121,7 +121,7 @@ footer.global {
 }
 
 .intro__text {
-    margin-bottom: $grid-gutter-width;
+    margin-bottom: $grid-gutter-width * 2;
     margin-top: $grid-gutter-width;
     .lead {
         max-width: 30em;
@@ -170,3 +170,25 @@ footer.global {
     }
 }
 
+#advantages {
+    .imgwrapper {
+        svg {
+            max-width: 5em;
+            margin: 0 auto;
+        }
+        padding-top: 2em;
+        @include media-breakpoint-up(md) {
+            padding-top: 3em;
+            padding-bottom: 1em;
+        }
+        @include media-breakpoint-up(lg) {
+            padding-top: 4em;
+        }
+    }
+}
+
+.imgwrapper {
+    .cls-1, .cls-2 {
+        stroke: #505b5e !important;
+    }
+}
