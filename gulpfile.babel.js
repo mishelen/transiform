@@ -118,3 +118,16 @@ gulp.task('default',
         )
     )
 );
+
+gulp.task('build',
+    gulp.series(
+        'clean',
+        gulp.parallel(
+            'styles',
+            'templates',
+            'scripts',
+            'assets'
+        )
+    )
+);
+

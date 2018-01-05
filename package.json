@@ -1,10 +1,15 @@
 {
     "name": "transiform",
     "version": "0.0.1",
-    "description": "single page site for samecalled company",
+    "description": "single page site for same named company",
     "main": "index.js",
     "license": "MIT",
     "private": true,
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp build",
+        "clean": "gulp clean"
+    },
     "dependencies": {
         "bootstrap": "^4.0.0-beta.3",
         "jquery": "^3.2.1",
