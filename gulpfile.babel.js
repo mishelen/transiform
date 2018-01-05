@@ -103,6 +103,18 @@ gulp.task('watch', () => {
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
 
+gulp.task('build',
+    gulp.series(
+        'clean',
+        gulp.parallel(
+            'styles',
+            'templates',
+            'scripts',
+            'assets'
+        )
+    )
+);
+
 gulp.task('default',
     gulp.series(
         'clean',
@@ -115,18 +127,6 @@ gulp.task('default',
         gulp.parallel(
             'browser-sync:init',
             'watch'
-        )
-    )
-);
-
-gulp.task('build',
-    gulp.series(
-        'clean',
-        gulp.parallel(
-            'styles',
-            'templates',
-            'scripts',
-            'assets'
         )
     )
 );
