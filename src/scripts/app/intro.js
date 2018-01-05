@@ -11,7 +11,6 @@
         
     }
     
-    
     const back_buildings = getEl('back_buildings');
     const front_buildings = getEl('front_buildings');
     const lake = getEl('lake');
@@ -20,12 +19,13 @@
     const sun = getEl('sun');
     const horizont = getEl('horizont');
     const railroad_group = getEl('railroad_group');
+    const train = getEl('train1');
     
     const treeClone = getEl('clone_tree');
     //treeClone.id = "";
     
-    let speedFactor = 0.8;
-    const FPS = 1000 / 24;
+    let speedFactor = 1;
+    const FPS = 1000 / 60;
     
     let speed = () => FPS * speedFactor;
     
@@ -48,7 +48,7 @@
         for (let i = 0; i < 10; i++) {
             
             const x = getRandomInt(0, introWidth);
-            const y = Math.random() > 0.5 ? getRandomInt(480, 540) : getRandomInt(570, 700);
+            const y = Math.random() > 0.5 ? getRandomInt(490, 540) : getRandomInt(570, 700);
             const scale = Math.floor((y / 80 - 5.7) * 100) / 100;
             const iniTransform = `translate(${x} ${y}) scale(${scale})`;
             
@@ -81,7 +81,7 @@
                 speedFactor -= 0.007;
             }
     
-            if (!nextActionStarted && speedFactor < 0.5) {
+            if (!nextActionStarted && speedFactor < 0.6) {
                 nextActionStarted = true;
                 nextAction();
             }
@@ -179,6 +179,17 @@
     
     // 4. Начало цикла. Чувак опускает газету, улыбается и подмигивает. Периодичность около 10 сек. 
     
+    function recycleTrain() {
+        let timer = setTimeout(function move() {
+            
+        }, FPS);
+        
+    }
+    
+    
     // 5. Сразу после этого уезжает поезд, через несколько секунд приезжает следующий, чувак улыбается и поезд уезжает.
+    
+    
+
     
 })();

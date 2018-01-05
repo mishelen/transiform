@@ -39,7 +39,7 @@
 @import "../../node_modules/bootstrap/scss/utilities";
 //@import "../../node_modules/bootstrap/scss/print";
 
-@import url('https://fonts.googleapis.com/css?family=Scada:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Scada:400,700&subset=cyrillic,cyrillic-ext');
 
 .navbar-brand {
     .logo {
@@ -59,27 +59,26 @@
     }
 }
 
+footer.global {
+    padding-top: 1em;
+    position: relative;
+    box-shadow: 0 -2px 2px rgba($black, .1);
+}
+
 .section {
     
 }
 
 .container-wrapper {
-    &:nth-child(odd) {
-        background: #f8f9fa;
-    }
-    
-    &:nth-child(even) {
-        background: #dae0e5;
-    }
 }
 
 .container-fluid {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    @include media-breakpoint-up(sm) {
-        max-width: 75em;
-        margin-left: auto;
-        margin-right: auto;
+    padding: $grid-gutter-width * 1.2 $grid-gutter-width / 2 $grid-gutter-width / 2;
+    &--pressed {
+        @include media-breakpoint-up(sm) {
+            padding: $grid-gutter-width * 1.6 $grid-gutter-width $grid-gutter-width;
+            max-width: 75em;
+        }
     }
     .global & {
         padding-top: 1px;
@@ -91,16 +90,50 @@
     background: #e7eeef;
 } 
 #directions {}
-#technologies {} 
-#perspectives {}
+#preliminary {
+    background: #e7eeef;
+} 
+#advantages {
+    background: #cbe2e3;
+}
 #contacts {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     min-height: 600px;
+    &__list {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(180deg, $white, $white 30%, transparent);
+    }
+}
+
+#map-container {
+    position: relative;
+    flex: auto;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.intro__text {
+    margin-bottom: $grid-gutter-width;
+    margin-top: $grid-gutter-width;
+    .lead {
+        max-width: 30em;
+    }
 }
 
 
 .heading {
+    font-weight: 700;
     font-size: 1.6rem;
+    margin: 1rem 0 .6rem;
+    position: relative;
     @include media-breakpoint-up(lg) {
         font-size: 2rem;
     }
@@ -115,6 +148,7 @@
 
 .sub-heading {
     font-size: 1.4rem;
+    margin: 1rem 0 .6rem;
     @include media-breakpoint-up(lg) {
         font-size: 1.65rem;
     }
@@ -123,15 +157,15 @@
 }
 
 .lead {
-    font-size: 1.25rem;
+    font-size: 1.18rem;
     @include media-breakpoint-up(lg) {
-        font-size: 1.34rem;
+        font-size: 1.27rem;
     }
     
     #intro & {
-        font-size: 1.55rem;
+        font-size: 1.35rem;
         @include media-breakpoint-up(lg) {
-            font-size: 1.65rem;
+            font-size: 1.5rem;
         }
     }
 }
